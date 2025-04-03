@@ -1,3 +1,9 @@
+import Avatar from "@/components/Avatar";
+
 export default function Home() {
-  return <h1>홈입니다!</h1>;
+  return (
+    <>
+      <Avatar />
+    </>
+  );
 }

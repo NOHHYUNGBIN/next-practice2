@@ -26,9 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col w-full max-w-2xl mx-auto">
+      <body className="flex flex-col w-full max-w-screen-xl mx-auto">
         <Header />
-        <main className="grow bg-sky-300">{children}</main>
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>
