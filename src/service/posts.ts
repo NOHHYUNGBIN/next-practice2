@@ -21,3 +21,15 @@ export async function getAllPosts(): Promise<Post[]> {
 export async function getFeturedPosts(): Promise<Post[]> {
   return getAllPosts().then((posts) => posts.filter((post) => post.featured));
 }
+
+export async function getNonFeturedPosts(): Promise<Post[]> {
+  return getAllPosts().then((posts) => posts.filter((post) => !post.featured));
+}
+
+export async function getSelectedPosts(
+  path: string
+): Promise<Post | undefined> {
+  return getAllPosts().then((posts) =>
+    posts.find((post) => post.path === path)
+  );
+}

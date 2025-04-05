@@ -1,4 +1,5 @@
 import Avatar from "@/components/Avatar";
+import CarouselPosts from "@/components/CarouselPosts";
 import FeaturedPostList from "@/components/FeaturedPostList";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Avatar />
       <FeaturedPostList />
+      <CarouselPosts />
     </>
   );
 }
