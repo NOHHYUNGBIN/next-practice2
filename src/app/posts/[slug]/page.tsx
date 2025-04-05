@@ -6,10 +6,11 @@ type Props = {
 
 export default async function SelectedPostPage({ params }: Props) {
   const slug = (await params).slug;
-  const data = await getSelectedPosts(slug);
+  const post = await getSelectedPosts(slug);
   return (
-    <pre>
-      <p>{data?.title}</p>
-    </pre>
+    <>
+      <p>{post.title}</p>
+      <pre>{post.content}</pre>
+    </>
   );
 }
